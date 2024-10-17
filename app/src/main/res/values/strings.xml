@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WorkPayCalculator</string>
+    <string name="work_pay_calculator">Work Pay Calculator</string>
+    <string name="enter_hours_worked">Enter Hours Worked</string>
+    <string name="enter_hourly_rate">Enter Hourly Rate</string>
+    <string name="calculate">Calculate</string>
+</resources>
