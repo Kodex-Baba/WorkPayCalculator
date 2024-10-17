@@ -4,4 +4,9 @@
     <string name="enter_hours_worked">Enter Hours Worked</string>
     <string name="enter_hourly_rate">Enter Hourly Rate</string>
     <string name="calculate">Calculate</string>
+
+    <!-- About String Resources -->
+    <string name="about_title">About</string>
+    <string name="author_name">Akorede Osunkoya</string>
+    <string name="student_id">101477407</string>
 </resources>

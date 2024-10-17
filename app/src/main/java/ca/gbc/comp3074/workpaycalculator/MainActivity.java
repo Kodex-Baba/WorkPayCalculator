@@ -1,7 +1,12 @@
 package ca.gbc.comp3074.workpaycalculator;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -13,7 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     private EditText editTextHoursWorked, editTextHourlyRate;
-    private TextView textViewResults;  // New TextView to show results
+    private TextView textViewResults;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         // Initialize views
         editTextHoursWorked = findViewById(R.id.editTextHoursWorked);
         editTextHourlyRate = findViewById(R.id.editTextHourlyRate);
-        textViewResults = findViewById(R.id.textViewResults);  // Initialize TextView
+        textViewResults = findViewById(R.id.textViewResults);
         Button buttonCalculate = findViewById(R.id.buttonCalculate);
 
         // Set OnClickListener for the Calculate button
@@ -33,6 +38,25 @@ public class MainActivity extends AppCompatActivity {
                 calculatePay();
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        if (item.getItemId() == R.id.action_about) {
+            // Launch AboutActivity when "About" menu item is selected
+            Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void calculatePay() {
@@ -53,8 +77,12 @@ public class MainActivity extends AppCompatActivity {
         // Calculate regular and overtime pay
         String resultMessage = getResultMessage(hoursWorked, hourlyRate);
 
-        // Show results in TextView instead of Toast
+        // Set the result to TextView
         textViewResults.setText(resultMessage);
+
+        // Load and start the fade-in animation
+        Animation fadeIn = AnimationUtils.loadAnimation(MainActivity.this, R.anim.fade_in);
+        textViewResults.startAnimation(fadeIn);  // Apply fade-in animation
     }
 
     private static @NonNull String getResultMessage(double hoursWorked, double hourlyRate) {
