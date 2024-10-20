@@ -19,7 +19,7 @@ public class AboutActivity extends AppCompatActivity {
     @Override
     public boolean onSupportNavigateUp() {
         // Handle the back button press to go back to MainActivity
-        onBackPressed();
+        getOnBackPressedDispatcher().onBackPressed();
         return true;
     }
 }

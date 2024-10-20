@@ -95,14 +95,17 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Calculate total pay and tax
-        double totalPay = regularPay + overtimePay;
-        double tax = totalPay * 0.18;
+        double totalPayBeforeTax = regularPay + overtimePay;
+        double tax = totalPayBeforeTax * 0.18;
+        double totalPayAfterTax = totalPayBeforeTax - tax; // Subtract tax
 
         // Prepare result message
         String resultMessage = "Regular Pay: $" + regularPay + "\n" +
                 "Overtime Pay: $" + overtimePay + "\n" +
-                "Total Pay: $" + totalPay + "\n" +
-                "Tax: $" + tax;
+                "Total Pay (Before Tax): $" + totalPayBeforeTax + "\n" +
+                "Tax: $" + tax + "\n" +
+                "Total Pay (After Tax): $" + totalPayAfterTax;
+
         return resultMessage;
     }
 }

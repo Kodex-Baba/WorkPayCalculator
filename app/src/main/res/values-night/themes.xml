@@ -2,6 +2,11 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.WorkPayCalculator" parent="Theme.Material3.DayNight">
         <!-- Customize your dark theme here. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/accentColor</item>
+        <item name="android:colorBackground">@color/backgroundColor</item>
+        <item name="android:textColor">@color/textColor</item>
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
 </resources>

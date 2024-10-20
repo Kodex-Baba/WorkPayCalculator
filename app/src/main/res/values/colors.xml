@@ -2,4 +2,15 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!-- Light Mode Colors -->
+    <color name="primaryColor">#009688</color>
+    <color name="primaryDarkColor">#00796B</color>
+    <color name="accentColor">#FF5722</color>
+    <color name="buttonColor">#4CAF50</color>
+    <color name="buttonTextColor">#FFFFFF</color>
+    <color name="backgroundColor">#FFFFFF</color>
+    <color name="textColor">#000000</color>
+    <color name="headerColor">#AC3E31</color>
+
+
 </resources>

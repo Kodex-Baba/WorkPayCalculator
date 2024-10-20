@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark Mode Colors -->
+    <color name="primaryColor">#80CBC4</color>
+    <color name="primaryDarkColor">#0A1828</color>
+    <color name="accentColor">#FFAB91</color>
+    <color name="buttonColor">#BFA181</color>
+    <color name="buttonTextColor">#FFFFFF</color>
+    <color name="backgroundColor">#0A1828</color>
+    <color name="textColor">#80CBC4</color>
+    <color name="headerColor">#BFA181</color>
+</resources>
